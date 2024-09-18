@@ -17,12 +17,13 @@ const CreatePost = () => {
   const [data, setData] = useState("");
   const [arrayOfPosts, setArrayOfPosts] =
     useState<NewPostsInterface[]>(jsonData);
+  console.log(arrayOfPosts);
   const onClick = async () => {
     if (session?.user && data.trim()) {
       const newPost: NewPostsInterface = {
         name: session.user.name,
         email: session.user.email,
-        image: session.user.image, 
+        image: session.user.image,
         title: data,
       };
 
@@ -55,7 +56,7 @@ const CreatePost = () => {
         <div className="flex flex-row gap-4">
           <div>
             <Image
-              src="/default-avatar.webp"
+              src="/Image/default-avatar.webp"
               alt="image"
               width={35}
               height={35}
@@ -79,9 +80,9 @@ const CreatePost = () => {
       {arrayOfPosts
         .slice()
         .reverse()
-        .map((posts: any, index) => {
-          return <PostCom posts={posts} key={index} />;
-        })}
+        .map((posts: any, index) => (
+          <PostCom posts={posts} key={index} />
+        ))}
     </>
   );
 };
