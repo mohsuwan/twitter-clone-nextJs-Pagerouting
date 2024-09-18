@@ -23,7 +23,7 @@ export const LoginModal = () => {
   }, [isLoding, loginModal, RegesterModal]);
   // console.log("credentials", "credentials");
 
-  const onSupmitHandler: FormEventHandler<HTMLFormElement> = async (ele) => {
+  const onSupmitHandler = async () => {
     // console.log("credentials", "credentials");
     try {
       setIsLoding(true);

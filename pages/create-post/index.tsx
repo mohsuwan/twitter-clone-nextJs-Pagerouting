@@ -2,9 +2,9 @@ import { Button } from "@/components/Button";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import jsonData from "@/postes_posted.json";
-import { PostCom } from "../post-com";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import PostCom from "../post-com";
 
 interface NewPostsInterface {
   name?: string | null;
