@@ -100,11 +100,9 @@ interface PostsInterface {
 //   );
 // }
 
+import React from "react";
 
-import React from 'react'
-
-export const PostsFollower = () => {
-
+const PostsFollower = () => {
   const router = useRouter();
 
   const [postsUseData, setPostsUseData] = useState<PostsInterface[]>([]);
@@ -119,13 +117,13 @@ export const PostsFollower = () => {
         const mergedPosts = mergePostsWithUsers(jsonData.posts, data.users);
 
         // setTimeout(() => {
-          setPostsUseData(mergedPosts);
+        setPostsUseData(mergedPosts);
         // }, 3000);
       } catch (err) {
         console.error(err);
       }
       //  finally {
-        // setIsLoading(false);
+      // setIsLoading(false);
       // }
     };
 
@@ -186,7 +184,6 @@ export const PostsFollower = () => {
       })}
     </>
   );
-}
+};
 
-
-export default PostsFollower
+export default PostsFollower;

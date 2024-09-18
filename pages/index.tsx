@@ -3,8 +3,8 @@ import { useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import useLoginModal from "@/hooks/useLoginModal";
 import CreatePost from "./create-post";
-import { PostsFollower } from "./posts";
-import { Loading } from "./Loading-page";
+import Loading from "./Loading-page";
+import PostsFollower from "./posts";
 
 export default function Home() {
   const loginModal = useLoginModal();

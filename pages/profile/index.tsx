@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import CreatePost from "../create-post";
 import useLoginModal from "@/hooks/useLoginModal";
 import { useEffect, useState } from "react";
-import { Loading } from "../Loading-page";
+import Loading from "../Loading-page";
 
 const ProfileView = () => {
   const session = useSession();

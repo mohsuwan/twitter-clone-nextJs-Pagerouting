@@ -7,7 +7,7 @@ import { useSession } from "next-auth/react";
 import jsonData from "@/posts-dummy.json";
 import { AiOutlineHeart, AiOutlineMessage } from "react-icons/ai";
 import useLoginModal from "@/hooks/useLoginModal";
-import { Loading } from "@/pages/Loading-page";
+import Loading from "@/pages/Loading-page";
 
 interface PostsInterface {
   id: number;
