@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['dummyjson.com'],
   },
-  output: 'export',
+  // output: 'export',
 };
 
 export default nextConfig;

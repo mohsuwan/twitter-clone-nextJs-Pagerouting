@@ -39,11 +39,12 @@ import { AiOutlineHeart, AiOutlineMessage } from "react-icons/ai";
 //   );
 // };
 
-import React from "react";
+
+import React from 'react'
 
 export const PostCom = ({ posts }: { posts: any }) => {
   console.log(posts);
-
+  
   return (
     <div className="border-b-[1px] border-neutral-800 p-5 cursor-pointer hover:border-neutral-900 transition">
       <div
@@ -79,6 +80,7 @@ export const PostCom = ({ posts }: { posts: any }) => {
       </div>
     </div>
   );
-};
+}
 
-export default PostCom;
+
+export default PostCom
