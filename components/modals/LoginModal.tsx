@@ -16,14 +16,13 @@ export const LoginModal = () => {
   const [isLoding, setIsLoding] = useState(false);
   const onToggle = useCallback(() => {
     if (isLoding) {
-      return;
     }
     loginModal.onClose();
     RegesterModal.onOpen();
   }, [isLoding, loginModal, RegesterModal]);
   // console.log("credentials", "credentials");
 
-  const onSupmitHandler: FormEventHandler<HTMLFormElement> = async (ele) => {
+  const onSupmitHandler = async () => {
     // console.log("credentials", "credentials");
     try {
       setIsLoding(true);
