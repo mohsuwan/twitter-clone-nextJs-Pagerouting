@@ -5,7 +5,7 @@ import { Button } from "./Button";
 interface ModalProps {
   isOpen?: boolean;
   onClose: () => void;
-  onSubmit: () => void;
+  onSubmit: () => Promise<void>;
   title?: string;
   body?: ReactElement;
   footer?: ReactElement;

@@ -16,7 +16,6 @@ export const LoginModal = () => {
   const [isLoding, setIsLoding] = useState(false);
   const onToggle = useCallback(() => {
     if (isLoding) {
-      return;
     }
     loginModal.onClose();
     RegesterModal.onOpen();
