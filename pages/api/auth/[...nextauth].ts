@@ -7,7 +7,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 // import prisma from "@/libs/prismadb";
 // import test from "node:test";
 const authOptions: NextAuthOptions = {
-  secret: process.env.SECRET,
   // session: {
   //   strategy: "jwt",
   // },
@@ -37,12 +36,12 @@ const authOptions: NextAuthOptions = {
     }),
   ],
   session: {
-    strategy: 'jwt',
+    strategy: "jwt",
     maxAge: 1 * 24 * 60 * 60,
     updateAge: 24 * 60 * 60,
   },
-  jwt: {
-  },
+  jwt: {},
+  secret: process.env.NEXTAUTH_SECRET,
 };
 export default NextAuth(authOptions);
 
