@@ -94,7 +94,7 @@ const ProfileView = () => {
             <div className="mt-24 px-4">
               <div className=" flex flex-col">
                 <p className="text-white text-2xl font-semibold">
-                  {IdData.title} {IdData.lastName}
+                  {IdData.firstName} {IdData.lastName}
                 </p>
                 <p className="text-md text-neutral-500 ">@{IdData.username}</p>
               </div>

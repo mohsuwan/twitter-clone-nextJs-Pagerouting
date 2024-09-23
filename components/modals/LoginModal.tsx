@@ -5,8 +5,6 @@ import { Modal } from "../Modal";
 import useRegesterModal from "@/hooks/useRegester";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
-// import { redirect } from "next/dist/server/api-utils";
-// import
 export const LoginModal = () => {
   const loginModal = useLoginModal();
   const RegesterModal = useRegesterModal();
@@ -21,10 +19,8 @@ export const LoginModal = () => {
     loginModal.onClose();
     RegesterModal.onOpen();
   }, [isLoding, loginModal, RegesterModal]);
-  // console.log("credentials", "credentials");
 
   const onSupmitHandler = async () => {
-    // console.log("credentials", "credentials");
     try {
       setIsLoding(true);
       const res: any = await signIn("credentials", {
@@ -37,7 +33,6 @@ export const LoginModal = () => {
       } else {
         toast.error("your email or password is incorrect !");
       }
-      // console.log(res);
     } catch (error) {
       console.log(error);
     } finally {

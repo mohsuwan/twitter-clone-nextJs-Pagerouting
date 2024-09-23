@@ -1,22 +1,24 @@
 // import bcrypt from "bcrypt";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+// import { pages } from "next/dist/build/templates/app-page";
 // import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 // import prisma from "@/libs/prismadb";
 // import test from "node:test";
 const authOptions: NextAuthOptions = {
-  session: {
-    strategy: "jwt",
-  },
+  secret: process.env.SECRET,
+  // session: {
+  //   strategy: "jwt",
+  // },
   providers: [
     CredentialsProvider({
       type: "credentials",
       credentials: {
-        email: { label: "Email", type: "email", placeholder: "em@gmail.com" },
-        password: { label: "Password", type: "password" },
+        // email: { label: "Email", type: "email", placeholder: "em@gmail.com" },
+        // password: { label: "Password", type: "password" },
       },
-      authorize(credentials, req) {
+      authorize(credentials) {
         const { email, password } = credentials as {
           email: string;
           password: string;
@@ -30,9 +32,17 @@ const authOptions: NextAuthOptions = {
           email: "suwanabdnabeelmoh@gmail.com",
           image: "/default-avatar.webp",
         };
+        // pages
       },
     }),
   ],
+  session: {
+    strategy: 'jwt',
+    maxAge: 1 * 24 * 60 * 60,
+    updateAge: 24 * 60 * 60,
+  },
+  jwt: {
+  },
 };
 export default NextAuth(authOptions);
 
