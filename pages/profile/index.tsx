@@ -45,7 +45,7 @@ const ProfileView = () => {
               />
               <div className="absolute -bottom-16 left-4">
                 <Image
-                  src="/default-avatar.webp"
+                  src="/Image/default-avatar.webp"
                   alt="image"
                   width={50}
                   height={50}
